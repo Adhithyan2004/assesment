@@ -1,24 +1,54 @@
+import { motion } from "framer-motion";
 import BentoHeader from "./BentoHeader";
 import BentoHeaderFeat from "./BentoHeaderFeat";
 import BentoOrderCard from "./BentoOrderCard";
 import BentoStatsCard from "./BentoStatCard";
 
 const Bento = () => {
+  const containerVariants = {
+    hidden: {},
+    show: {
+      transition: { staggerChildren: 0.25 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
-    // CRITICAL: Added 'grid' utility here 👇
-    <div className="relative">
+    <div className="relative lg:overflow-hidden">
       <div className="hidden lg:block">
         <BentoStatsCard />
       </div>
       <BentoOrderCard />
-      <div className=" grid grid-cols-12 mx-5 my-8 sm:mx-8 md:mx-10 gap-2 lg:my-20 md:my-20  grid-rows-12 xl:mx-20 lg:h-[96vh] xl:h-[90vh] ">
-        {/* box1 */}
-        <div className="row-span-6 hidden lg:block rounded-lg lg:col-span-4">
-          <BentoHeader />
-        </div>
 
-        {/* Box2 */}
-        <div className=" rounded-lg lg:col-span-4 col-span-6 row-span-6 lg:row-span-7">
+      {/* 🧱 Grid Section */}
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        className="grid grid-cols-12 mx-5 my-8 sm:mx-8 md:mx-10 gap-2 lg:my-20 md:my-20 grid-rows-12 sm:h-[90vh] xl:mx-20 lg:h-[96vh] xl:h-[90vh]"
+      >
+        {/* Box 1 */}
+        <motion.div
+          variants={itemVariants}
+          className="row-span-6 hidden lg:block rounded-lg lg:col-span-4"
+        >
+          <BentoHeader />
+        </motion.div>
+
+        {/* Box 2 */}
+        <motion.div
+          variants={itemVariants}
+          className="rounded-lg lg:col-span-4 col-span-6 row-span-6 lg:row-span-7"
+        >
           <video
             src="/videos/farming.mp4"
             autoPlay
@@ -27,13 +57,19 @@ const Bento = () => {
             playsInline
             className="object-cover w-full h-full rounded-lg"
           />
-        </div>
+        </motion.div>
 
-        {/* Box3 */}
-        <div className="bg-[#EB6651] rounded-lg col-span-4 hidden lg:block row-span-4"></div>
+        {/* Box 3 */}
+        <motion.div
+          variants={itemVariants}
+          className="bg-[#EB6651] rounded-lg col-span-4 hidden lg:block row-span-4"
+        ></motion.div>
 
-        {/* Box4 */}
-        <div className=" rounded-lg lg:col-span-4 col-span-6 row-span-6 lg:row-span-8">
+        {/* Box 4 */}
+        <motion.div
+          variants={itemVariants}
+          className="rounded-lg lg:col-span-4 col-span-6 row-span-6 lg:row-span-8"
+        >
           <video
             src="/videos/cargoship.mp4"
             autoPlay
@@ -42,22 +78,28 @@ const Bento = () => {
             playsInline
             className="object-cover w-full h-full rounded-lg"
           />
-        </div>
+        </motion.div>
 
-        {/* Box5 */}
-        <div className="lg:row-span-6 row-span-6 col-span-12 bg-orange-400 rounded-lg lg:col-span-4">
+        {/* Box 5 */}
+        <motion.div
+          variants={itemVariants}
+          className="lg:row-span-6 row-span-6 col-span-12 bg-orange-400 rounded-lg lg:col-span-4"
+        >
           <img
             src="/images/ricefield.jpg"
             alt="RiceField"
             className="object-cover w-full h-full rounded-lg"
           />
-        </div>
+        </motion.div>
 
-        {/* Box6 */}
-        <div className="bg-[#F9F6EE] rounded-lg col-span-4 hidden lg:block row-span-5 ">
+        {/* Box 6 */}
+        <motion.div
+          variants={itemVariants}
+          className="bg-[#F9F6EE] rounded-lg col-span-4 hidden lg:block row-span-5"
+        >
           <BentoHeaderFeat />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

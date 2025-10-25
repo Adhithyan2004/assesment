@@ -1,21 +1,16 @@
-import { useEffect, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
 
 const Timeline = () => {
-  const [progress, setProgress] = useState(0);
+  const controls = useAnimation();
 
-  // Animate progress on mount
   useEffect(() => {
-    let current = 0;
-    const interval = setInterval(() => {
-      current += 1; // increment by 1%
-      if (current > 100) {
-        clearInterval(interval);
-      } else {
-        setProgress(current);
-      }
-    }, 10); // 10ms per step → 1s total for full bar
-    return () => clearInterval(interval);
-  }, []);
+    // Start the progress animation when mounted
+    controls.start({
+      width: "100%",
+      transition: { duration: 2, ease: "easeInOut" },
+    });
+  }, [controls]);
 
   const steps = [
     "Real-time container tracking",
@@ -26,28 +21,33 @@ const Timeline = () => {
 
   return (
     <div className="flex flex-col items-center justify-center bg-white">
-      {/* Timeline container */}
-      <div className="relative w-4/5 ">
-        {/* Line */}
+      <div className="relative w-4/5">
+        {/* Background line */}
         <div className="absolute left-0 w-full h-1 transform translate-y-1/2 bg-gray-200 rounded-full top-1/2"></div>
 
-        {/* Animated fill */}
-        <div
-          className="absolute left-0 h-1 transition-all ease-in-out transform translate-y-1/2 rounded-full top-1/2 bg-linear-to-r from-[#FC5252] to-[#FBB910] duration-2000"
-          style={{ width: `${progress}%` }}
-        ></div>
+        {/* Animated progress bar */}
+        <motion.div
+          className="absolute left-0 h-1 transform translate-y-1/2 rounded-full top-1/2 bg-linear-to-r from-[#FC5252] to-[#FBB910]"
+          initial={{ width: 0 }}
+          animate={controls}
+        />
 
         {/* Circles + labels */}
-        <div className="flex justify-between mt-14 ">
+        <div className="flex justify-between mt-14">
           {steps.map((label, i) => (
-            <div key={i} className="flex flex-col items-center w-1/4 ">
-              <div
-                className={`w-6 h-6 z-40 rounded-full border-4 ${
-                  progress > (i / (steps.length - 1)) * 100
-                    ? "border-purple-500 bg-white"
-                    : "border-orange-300 bg-gray-100"
-                } transition-all duration-500`}
-              ></div>
+            <div key={i} className="flex flex-col items-center w-1/4">
+              <motion.div
+                className="w-6 h-6 z-40 rounded-full border-4"
+                initial={{ borderColor: "#FDBA74", backgroundColor: "#F3F4F6" }}
+                animate={{
+                  borderColor: "#A855F7",
+                  backgroundColor: "#fff",
+                }}
+                transition={{
+                  delay: i * 0.5, // each circle lights up sequentially
+                  duration: 0.5,
+                }}
+              ></motion.div>
               <p className="w-3/4 mt-2 text-sm text-gray-600">{label}</p>
             </div>
           ))}

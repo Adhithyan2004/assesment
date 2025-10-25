@@ -14,7 +14,7 @@ const Testimonials = () => {
         </h1>
         <p className="sm:text-xl text-2xl font-bold">OUR CUSTOMERS</p>
       </div>
-      <div className="flex xl:gap-16 flex-wrap mt-14 justify-evenly">
+      <div className="flex gap-16 flex-wrap mt-14 justify-around">
         <TestimonialCard
           avatar={"/images/disneyLogo.png"}
           review={

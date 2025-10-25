@@ -1,4 +1,5 @@
 import { PieChart, Pie, Cell } from "recharts";
+import { motion } from "framer-motion";
 
 const StatsCard = () => {
   const data = [
@@ -9,7 +10,13 @@ const StatsCard = () => {
   const COLORS = ["#F4B000", "#EB6651"];
 
   return (
-    <div className="absolute left-8 right-8 sm:left-30 sm:right-30 md:left-40 md:right-40 bottom-5 lg:bottom-13 lg:left-[56vw] xl:left-7/12 2xl:left-3/5 bg-[#F9F6EE] shadow-lg lg:shadow-xl rounded-3xl  flex items-center justify-center sm:justify-between  gap-14  sm:px-6 py-4 lg:w-[400px] xl:w-[420px]">
+    <motion.div
+      initial={{ opacity: 0, y: -30 }}
+      whileInView={{ opacity: 1, y: 20 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0.95 }}
+      className="absolute left-8 right-8 sm:left-30 sm:right-30 md:left-40 md:-bottom-10 md:right-40 bottom-5 lg:bottom-13 lg:left-[56vw] xl:left-7/12 2xl:left-3/5 bg-[#F9F6EE] shadow-lg lg:shadow-xl rounded-3xl  flex items-center justify-center sm:justify-between  gap-14  sm:px-6 py-4 lg:w-[400px] xl:w-[420px]"
+    >
       {/* Left Section */}
       <div className="flex flex-col gap-3">
         <div>
@@ -59,7 +66,7 @@ const StatsCard = () => {
           </span>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
