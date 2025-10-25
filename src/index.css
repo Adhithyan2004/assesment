@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-.bento {
-  @apply rounded-lg col-span-4;
-}
-
 .Btn {
   @apply px-8 py-3 bg-blue-950 text-white hover:bg-blue-900 transition;
 }
