@@ -3,6 +3,8 @@
 A responsive, pixel-perfect landing page built from a provided Dribbble mockup.  
 The focus was on visual fidelity, smooth animations, and subtle micro-interactions.
 
+### Deployed Live : https://assesment-azure.vercel.app/
+
 ---
 
 ## Project Summary
