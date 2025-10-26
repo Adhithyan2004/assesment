@@ -18,6 +18,8 @@ The focus was on visual fidelity, smooth animations, and subtle micro-interactio
 
 - **Animations:** Framer Motion + Tailwind transitions for scroll-based animations and micro interactions like hover effects.
 
+- **Media Optimization:** Hosted looping videos on Cloudinary for optimized delivery and smoother playback as vercel is not good with hosting heavy media.
+
 - **Structure:**
   - `components/` – Reusable UI components.
   - `sections/` – Layout sections of the landing page.
