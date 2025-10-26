@@ -49,7 +49,7 @@ const ServiceSection = () => {
         variants={containerVariants}
         initial="hidden"
         animate={controls}
-        onAnimationComplete={() => setShowTimeline(true)} // 👈 Trigger Timeline after animation
+        onAnimationComplete={() => setShowTimeline(true)} // Trigger Timeline after animation
       >
         {/* Header */}
         <motion.div

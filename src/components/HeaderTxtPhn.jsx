@@ -11,7 +11,7 @@ const HeaderTxtPhn = () => {
         duration: 0.8,
         ease: "easeOut",
         when: "beforeChildren",
-        staggerChildren: 0.2, // smooth stagger
+        staggerChildren: 0.2,
       },
     },
   };

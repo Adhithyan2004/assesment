@@ -28,7 +28,7 @@ const Bento = () => {
       </div>
       <BentoOrderCard />
 
-      {/* 🧱 Grid Section */}
+      {/*  Grid Section */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
