@@ -50,7 +50,7 @@ const Bento = () => {
           className="rounded-lg lg:col-span-4 col-span-6 row-span-6 lg:row-span-7"
         >
           <video
-            src="/videos/farming.mp4"
+            src="https://res.cloudinary.com/dmxs1hptc/video/upload/v1761468500/farming_z1ta82.mp4"
             autoPlay
             loop
             muted
@@ -71,7 +71,7 @@ const Bento = () => {
           className="rounded-lg lg:col-span-4 col-span-6 row-span-6 lg:row-span-8"
         >
           <video
-            src="/videos/cargoship.mp4"
+            src="https://res.cloudinary.com/dmxs1hptc/video/upload/v1761468719/cargoship_t9seyt.mp4"
             autoPlay
             loop
             muted
