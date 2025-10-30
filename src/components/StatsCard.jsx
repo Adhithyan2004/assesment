@@ -15,7 +15,7 @@ const StatsCard = () => {
       whileInView={{ opacity: 1, y: 20 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut", delay: 0.95 }}
-      className="absolute left-8 right-8 sm:left-30 sm:right-30 md:left-40 md:-bottom-10 md:right-40 -bottom-5 lg:bottom-13 lg:left-[56vw] xl:left-7/12 2xl:left-3/5 bg-[#F9F6EE] shadow-lg lg:shadow-xl rounded-3xl  flex items-center justify-center sm:justify-between  gap-14  sm:px-6 py-4 lg:w-[400px] xl:w-[420px]"
+      className="absolute left-8 right-8 rounded-3xl justify-center py-4 -bottom-5 flex items-center gap-14 bg-[#F9F6EE] shadow-lg sm:left-30 sm:right-30 sm:justify-between sm:px-6 md:left-40 md:-bottom-10 md:right-40 lg:bottom-13 lg:left-[56vw] lg:shadow-xl lg:w-[400px] xl:left-7/12 xl:w-[420px] 2xl:left-3/5"
     >
       {/* Left Section */}
       <div className="flex flex-col gap-3">

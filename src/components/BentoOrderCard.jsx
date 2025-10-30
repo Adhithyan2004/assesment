@@ -8,7 +8,7 @@ const BentoOrderCard = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut", delay: 1.5 }}
-      className="absolute top-4/5 left-8 right-8 sm:top-[90%] sm:left-20 sm:right-20 md:left-30 md:right-30 lg:top-[60%] lg:left-28 xl:left-60 2xl:left-80 z-20 bg-[#f7f2e4] p-4 md:p-6 rounded-2xl shadow-xl flex flex-col gap-3 lg:w-[360px]"
+      className="absolute top-4/5 left-8 z-20 bg-[#f7f2e4] p-4 right-8 rounded-2xl shadow-xl flex flex-col gap-3 sm:top-[90%] sm:left-20 sm:right-20 md:p-6 md:left-30 md:right-30 lg:top-[60%] lg:w-[360px] lg:left-28 xl:left-60 2xl:left-80"
     >
       {/* Avatar + Header */}
       <div className="flex items-center justify-between gap-12">

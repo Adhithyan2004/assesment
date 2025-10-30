@@ -43,7 +43,7 @@ const ServiceSection = () => {
   };
 
   return (
-    <section ref={ref} className="hidden lg:block overflow-hidden">
+    <section ref={ref} className="hidden overflow-hidden lg:block">
       <motion.div
         className="flex flex-col gap-10 lg:my-30 xl:mx-20 xl:my-20"
         variants={containerVariants}
@@ -54,7 +54,7 @@ const ServiceSection = () => {
         {/* Header */}
         <motion.div
           variants={itemVariants}
-          className="flex flex-col items-center lg:gap-4 gap-6"
+          className="flex flex-col items-center gap-6 lg:gap-4"
         >
           <LuTowerControl
             size={70}

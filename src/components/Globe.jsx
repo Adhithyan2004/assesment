@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Globe = () => {
   return (
-    <div className="relative w-full h-44 md:h-60 lg:h-80 xl:h-90 mt-40 overflow-hidden">
+    <div className="relative w-full h-44 mt-40 overflow-hidden md:h-60 lg:h-80 xl:h-90">
       {/* Globe fades in when in view */}
       <motion.img
         src="/svg/globe.svg"

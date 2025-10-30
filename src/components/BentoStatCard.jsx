@@ -11,10 +11,10 @@ const BentoStatsCard = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: -30 }}
-      whileInView={{ opacity: 1, y:80 }}
+      whileInView={{ opacity: 1, y: 80 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut", delay: 1.5 }}
-      className="absolute top-7 left-1/2 -translate-x-1/8 bg-[#F9F6EE] backdrop-blur-md shadow-xl rounded-3xl flex items-center justify-between xl:px-6 lg:px-4 py-4 lg:w-[400px] xl:w-[420px]"
+      className="absolute top-7 left-1/2 -translate-x-1/8 bg-[#F9F6EE] backdrop-blur-md shadow-xl py-4 rounded-3xl flex items-center justify-between xl:px-6 lg:px-4 lg:w-[400px] xl:w-[420px]"
     >
       <div>
         <p className="text-gray-500 text-xs font-medium uppercase">

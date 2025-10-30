@@ -2,12 +2,12 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0F0B43] text-white px-6 sm:px-10 md:px-16 lg:px-20 pt-10 pb-4 flex flex-col gap-10">
+    <footer className="bg-[#0F0B43] text-white px-6 pt-10 pb-4 flex flex-col gap-10 sm:px-10 md:px-16 lg:px-20">
       {/* Logo */}
-      <h1 className="text-2xl sm:text-3xl font-bold  md:text-left">Red Sky</h1>
+      <h1 className="text-2xl font-bold sm:text-3xl md:text-left">Red Sky</h1>
 
       {/* Main Content */}
-      <div className="MainCntr flex flex-col md:flex-row md:flex-wrap justify-between gap-10 md:gap-8 lg:gap-12">
+      <div className="MainCntr flex flex-col justify-between gap-10 md:flex-row md:flex-wrap md:gap-8 lg:gap-12">
         {/* Address 1 */}
         <div className="Address1 md:w-[45%] lg:w-auto">
           <h2 className="font-bold text-lg">United Kingdom</h2>
@@ -70,7 +70,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <p className="text-xs sm:text-sm font-semibold text-center text-gray-400 border-t border-gray-700 pt-4 mt-4">
+      <p className="text-xs font-semibold text-center text-gray-400 border-t border-gray-700 pt-4 mt-4  sm:text-sm">
         © 2025 RedSky Foods Ltd
       </p>
     </footer>

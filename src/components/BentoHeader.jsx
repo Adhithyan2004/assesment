@@ -1,7 +1,7 @@
 const BentoHeader = () => {
   return (
     <div className="flex flex-col gap-6">
-      <h1 className="lg:text-4xl xl:text-5xl font-bold">
+      <h1 className="font-bold lg:text-4xl xl:text-5xl">
         Powering your <br />
         <span className="text-[#EB6651]"> supply chain</span>
       </h1>

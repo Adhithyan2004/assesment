@@ -1,6 +1,6 @@
 const TestimonialCard = ({ avatar, review, author }) => {
   return (
-    <div className="bg-[#f9f3ef] rounded-3xl p-8 w-full md:w-96 text-center flex flex-col items-center shadow-sm">
+    <div className="bg-[#f9f3ef] rounded-3xl p-8 w-full text-center flex flex-col items-center shadow-sm md:w-96">
       <div className="flex justify-center -mt-14 border-8 border-[#f9f3ef] rounded-full">
         <div className="bg-white rounded-full p-4 ">
           <img

@@ -32,7 +32,7 @@ const HeaderTxtPhn = () => {
       {/* Heading */}
       <motion.h1
         variants={itemVariants}
-        className="font-bold sm:text-5xl md:text-6xl text-4xl text-center"
+        className="font-bold text-4xl text-center sm:text-5xl md:text-6xl"
       >
         Powering your <br />
         <span className="text-[#EB6651]"> supply chain</span>

@@ -14,7 +14,7 @@ const TradeFinanceCard = () => {
       whileInView={{ opacity: 1, y: 20 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut", delay: 0.95 }}
-      className="absolute left-7 right-7 bottom-5 sm:left-30 sm:right-30 md:left-40 lg:bottom-20 md:right-40  xl:bottom-10 xl:left-64 2xl:left-80 lg:shadow-lg flex items-center justify-between bg-[#F9F6EE] rounded-2xl px-4  lg:px-6 lg:py-4 py-3 lg:w-[400px]"
+      className="absolute left-7 right-7 bottom-5 flex items-center justify-between bg-[#F9F6EE] rounded-2xl px-4 py-3 sm:left-30 sm:right-30 md:left-40 lg:bottom-20 md:right-40 xl:bottom-10 lg:shadow-lg lg:px-6 lg:py-4 lg:w-[400px] xl:left-64 2xl:left-80"
     >
       {/* Left Section */}
       <div className="flex items-center gap-4">

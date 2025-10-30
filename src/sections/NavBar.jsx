@@ -6,33 +6,33 @@ const NavBar = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <nav className="flex justify-between items-center px-4 sm:px-6 md:px-10 lg:px-16 2xl:px-24 py-4 md:py-6 bg-white relative z-50">
+    <nav className="relative z-50 flex items-center justify-between px-4 py-4 bg-white sm:px-6 md:px-10 md:py-6 lg:px-16 2xl:px-24">
       {/* Logo */}
       <h1 className="font-bold text-2xl sm:text-3xl lg:text-4xl text-[#0F0B43]">
         Red Sky
       </h1>
 
       {/* Desktop Links */}
-      <div className="hidden md:flex items-center gap-4 lg:gap-8 xl:gap-12 text-sm lg:text-base">
-        <a href="#" className="hover:text-blue-900 transition-colors">
+      <div className="items-center hidden gap-4 text-sm md:flex lg:gap-8 lg:text-base xl:gap-12">
+        <a href="#" className="transition-colors hover:text-blue-900">
           PLATFORM
         </a>
-        <a href="#" className="hover:text-blue-900 transition-colors">
+        <a href="#" className="transition-colors hover:text-blue-900">
           FINANCE
         </a>
-        <a href="#" className="hover:text-blue-900 transition-colors">
+        <a href="#" className="transition-colors hover:text-blue-900">
           FORWARDING
         </a>
-        <a href="#" className="hover:text-blue-900 transition-colors">
+        <a href="#" className="transition-colors hover:text-blue-900">
           ABOUT US
         </a>
-        <a href="#" className="hover:text-blue-900 transition-colors">
+        <a href="#" className="transition-colors hover:text-blue-900">
           CONTACT US
         </a>
       </div>
 
       {/* Login Button (hidden on small screens) */}
-      <button className="hidden md:block px-6 lg:px-10 py-2 lg:py-3 rounded-full bg-[#0F0B43] text-white text-sm lg:text-base font-semibold hover:bg-[#191368] transition">
+      <button className="hidden px-6 py-2 rounded-full bg-[#0F0B43] text-white text-sm font-semibold hover:bg-[#191368] transition md:block lg:px-10 lg:py-3 lg:text-base">
         LOGIN
       </button>
 
@@ -50,7 +50,7 @@ const NavBar = () => {
         } transition-transform duration-300 ease-in-out z-50`}
       >
         <div className="flex flex-col h-full p-6">
-          <div className="flex justify-between items-center mb-8">
+          <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl font-semibold text-[#0F0B43]">Red Sky</h2>
             <button onClick={toggleMenu} className="text-3xl">
               <FiX />
@@ -87,7 +87,7 @@ const NavBar = () => {
       {/* Background Overlay */}
       {menuOpen && (
         <div
-          className="fixed inset-0 bg-black opacity-70 z-40"
+          className="fixed inset-0 z-40 bg-black opacity-70"
           onClick={toggleMenu}
         ></div>
       )}
